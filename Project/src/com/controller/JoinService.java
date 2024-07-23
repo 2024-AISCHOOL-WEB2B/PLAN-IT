@@ -43,7 +43,7 @@ public class JoinService extends HttpServlet {
 		}
 		
 		
-//		response.sendRedirect("main.jsp");
+		response.sendRedirect("main.jsp");
 		
 	}
 

@@ -16,7 +16,6 @@ public class MemberDTO {
 	
 	public MemberDTO(String id, String pw, String email, String addr, String name, String birth, String gender,
 			String marry) {
-		super();
 		this.id = id;
 		this.pw = pw;
 		this.email = email;
@@ -26,6 +25,16 @@ public class MemberDTO {
 		this.marry = marry;
 		this.gender = gender;
 	}
+	
+	
+	public MemberDTO(String id, String pw) {
+		this.id = id;
+		this.pw = pw;
+	}
+
+
+
+
 	public String getId() {
 		return id;
 	}
