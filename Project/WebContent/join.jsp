@@ -51,14 +51,21 @@
         <form action="JoinService" method="post">
             <input type="text" name="id" placeholder="아이디" required>
             <input type="password" name="pw" placeholder="비밀번호" required>
-            <input type="email" name="email" placeholder="이메일" required>
-            <input type="text" name="addr" placeholder="주소" required>
             <input type="text" name="name" placeholder="이름" required>
             <input type="text" name="birth" placeholder="생년월일" required>
+            <input type="text" name="phone" placeholder="전화번호" required>
+            <input type="text" name="kf" placeholder="내/외국인" required>
+            
              <div class="radio-group">
                 <label>성별:</label>
                 <label><input type="radio" name="gender" value="남성" required> 남성</label>
                 <label><input type="radio" name="gender" value="여성" required> 여성</label>
+            </div>
+            
+            <div class="radio-group">
+                <label>성별:</label>
+                <label><input type="radio" name="kf" value="내국인" required> 내국인</label>
+                <label><input type="radio" name="kf" value="외국인" required> 외국인</label>
             </div>
             
             <div class="radio-group">

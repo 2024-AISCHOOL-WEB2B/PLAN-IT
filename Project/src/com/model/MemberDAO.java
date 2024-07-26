@@ -57,12 +57,12 @@ public class MemberDAO {
 			
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
-			psmt.setString(3, dto.getEmail());
-			psmt.setString(4, dto.getAddr());
-			psmt.setString(5, dto.getName());
-			psmt.setString(6, dto.getBirth());
-			psmt.setString(7, dto.getMarry());
-			psmt.setString(8, dto.getGender());
+			psmt.setString(3, dto.getName());
+			psmt.setString(4, dto.getBirth());
+			psmt.setString(5, dto.getPhone());
+			psmt.setString(6, dto.getGender());
+			psmt.setString(7, dto.getKf());
+			psmt.setString(8, dto.getMarry());
 			
 			cnt = psmt.executeUpdate();
 			
@@ -95,14 +95,14 @@ public class MemberDAO {
 			if(rs.next()) {
 				String id = rs.getString("id");
 				String pw = rs.getString("pw");
-				String email = rs.getString("email");
-				String addr = rs.getString("addr");
 				String name = rs.getString("name");
 				String birth = rs.getString("birth");
-				String marry = rs.getString("marry");
+				String phone = rs.getString("phone");
 				String gender = rs.getString("gender");
+				String kf = rs.getString("kf");
+				String marry = rs.getString("marry");
 				
-				info = new MemberDTO(id, pw, email, addr, name, birth, gender, marry);
+				info = new MemberDTO(id, pw, name, birth, phone, gender, kf, marry);
 			}
 		} catch (SQLException e) {
 			System.out.println("db 오류");

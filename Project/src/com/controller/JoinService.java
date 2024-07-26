@@ -23,14 +23,19 @@ public class JoinService extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String email = request.getParameter("email");
-		String addr = request.getParameter("addr");
 		String name = request.getParameter("name");
 		String birth = request.getParameter("birth");
+		String phone = request.getParameter("phone");
 		String gender = request.getParameter("gender");
+		String kf = request.getParameter("kf");
 		String marry = request.getParameter("marry");
 		
-		MemberDTO dto = new MemberDTO(id, pw, email, addr, name, birth, gender, marry);
+		
+		
+		
+		
+		
+		MemberDTO dto = new MemberDTO(id, pw, name, birth, phone, gender, kf, marry);
 		
 		MemberDAO dao = new MemberDAO();
 		
