@@ -54,7 +54,7 @@
             <input type="text" name="name" placeholder="이름" required>
             <input type="text" name="birth" placeholder="생년월일" required>
             <input type="text" name="phone" placeholder="전화번호" required>
-            <input type="text" name="kf" placeholder="내/외국인" required>
+            
             
              <div class="radio-group">
                 <label>성별:</label>
@@ -63,7 +63,7 @@
             </div>
             
             <div class="radio-group">
-                <label>성별:</label>
+                <label>내외국인:</label>
                 <label><input type="radio" name="kf" value="내국인" required> 내국인</label>
                 <label><input type="radio" name="kf" value="외국인" required> 외국인</label>
             </div>
