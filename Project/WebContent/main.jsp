@@ -87,11 +87,13 @@
         
         <!-- 아이디 비밀번호 입력 -->
         <div class="form-container">
-            <input type="text" id="username" name="username" placeholder="아이디 또는 전화번호">
-            <input type="password" id="password" name="password" placeholder="비밀번호">
+        	<form action="LoginServlet" method="post">
+            	<input type="text" id="username" name="id" placeholder="아이디 또는 전화번호">
+            	<input type="password" id="password" name="pw" placeholder="비밀번호">
+        	</form>
         </div>
         
-
+			
         <!-- 로그인 버튼 -->
         <button class="login-button" onclick="login()">로그인</button>
         
