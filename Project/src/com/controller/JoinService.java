@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.MemberDAO;
 import com.model.MemberDTO;
@@ -30,17 +31,14 @@ public class JoinService extends HttpServlet {
 		String kf = request.getParameter("kf");
 		String marry = request.getParameter("marry");
 		
-		
-		
-		
-		
-		
 		MemberDTO dto = new MemberDTO(id, pw, name, birth, phone, gender, kf, marry);
 		
 		MemberDAO dao = new MemberDAO();
 		
 		int cnt = dao.join(dto);
+		HttpSession session = request.getSession();
 		
+		session.setAttribute("userid", dto.getId());
 		if(cnt>0) {
 			System.out.println("회원 추가 성공");
 		}else {
