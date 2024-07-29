@@ -30,6 +30,7 @@
         }
         .logo {
             margin-bottom: 20px;
+           	color: #8ab7ff;
         }
         .logo img {
             width: 100px;
@@ -87,9 +88,9 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Naver_Logotype.svg/1024px-Naver_Logotype.svg.png" alt="Naver Logo">
+            <h1>플랜잇</h1>
         </div>
-        <form id="signup-form"></form>
+        <form id="signup-form">
             <div class="form-container">
                 <input type="text" id="username" name="username" placeholder="아이디">
                 <input type="password" id="password" name="password" placeholder="비밀번호">
@@ -98,27 +99,27 @@
                 <input type="text" id="phone" name="phone" placeholder="휴대전화번호">
                 
                 <div class="radio-container">
-                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <input type="radio" id="male" name="gender" value="male">
                     <label for="male">남자</label>
                     <input type="radio" id="female" name="gender" value="female">
                     <label for="female">여자</label>
                 </div>
                 <div class="radio-container">
-                    <input type="radio" id="domestic" name="nationality" value="domestic" checked>
+                    <input type="radio" id="domestic" name="nationality" value="domestic">
                     <label for="domestic">내국인</label>
                     <input type="radio" id="foreign" name="nationality" value="foreign">
                     <label for="foreign">외국인</label>
                 </div>
         
                 <div class="radio-container">
-                    <input type="radio" id="single" name="marital_status" value="single" checked>
+                    <input type="radio" id="single" name="marital_status" value="single">
                     <label for="single">미혼</label>
                     <input type="radio" id="married" name="marital_status" value="married">
                     <label for="married">기혼</label>
                 </div>
                 
-                <button onclick="location.href='page1survey.html'">선호도 조사하기</button>
-                <button type="submit" onclick="location.href='page1login.html'">회원가입 완료</button>
+                <button type="button" onclick="saveSignupData()">선호도 조사하기</button>
+                <button type="submit" onclick="location.href='page1login.jsp'">회원가입 완료</button>
             </div>
             <div class="footer">
                 <p>&copy; Team 진심으로 한대유 . All Rights Reserved.</p>
@@ -126,11 +127,50 @@
         </form>
     </div>
     <script>
+        // 저장된 데이터를 불러오는 함수
+        function loadSignupData() {
+            const referrer = document.referrer;
+            if (referrer.includes('page1survey2.jsp')) {
+                const signupData = JSON.parse(localStorage.getItem('signupData'));
+                if (signupData) {
+                    document.getElementById('username').value = signupData.username;
+                    document.getElementById('password').value = signupData.password;
+                    document.getElementById('name').value = signupData.name;
+                    document.getElementById('birthdate').value = signupData.birthdate;
+                    document.getElementById('phone').value = signupData.phone;
+                    document.getElementById(signupData.gender).checked = true;
+                    document.getElementById(signupData.nationality).checked = true;
+                    document.getElementById(signupData.marital_status).checked = true;
+                }
+            } else {
+                localStorage.removeItem('signupData');
+            }
+        }
+
+        // 데이터를 저장하는 함수
+        function saveSignupData() {
+            const signupData = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value,
+                name: document.getElementById('name').value,
+                birthdate: document.getElementById('birthdate').value,
+                phone: document.getElementById('phone').value,
+                gender: document.querySelector('input[name="gender"]:checked').id,
+                nationality: document.querySelector('input[name="nationality"]:checked').id,
+                marital_status: document.querySelector('input[name="marital_status"]:checked').id,
+            };
+
+            localStorage.setItem('signupData', JSON.stringify(signupData));
+            location.href = 'page1survey2.jsp';
+        }
+
         document.getElementById('signup-form').addEventListener('submit', function(event) {
             event.preventDefault();
             alert('회원가입이 완료되었습니다.');
-            
         });
+
+        // 페이지 로드 시 저장된 데이터 불러오기
+        window.onload = loadSignupData;
     </script>
 </body>
 </html>

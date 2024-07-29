@@ -1,0 +1,9 @@
+{
+    "trans_id": "0190fe1463367821ab511ede6ce74377",
+    "routes": [
+        {
+            "result_code": 102,
+            "result_msg": "시작 지점 주변의 도로를 탐색할 수 없음"
+        }
+    ]
+}

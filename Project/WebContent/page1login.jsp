@@ -98,18 +98,18 @@
         <div class="links">
             <a href="#">비밀번호 찾기</a>
             <a href="#">아이디 찾기</a>
-            <a href="page1sign.html">회원가입</a>
+            <a href="page1sign.jsp">회원가입</a>
         </div>
         <div class="footer">
-            <p>&copy; Team 진심으로 한대유. All Rights Reserved.</p>
+            <p>&copy; Team PlanIt. All Rights Reserved.</p>
         </div>
     </div>
 
     <script>
         function login() {
-            alert('로그인 완료 ❤️');
+            alert('로그인 완료 ');
             
-            location.href = 'page2select.html'; // 로그인 완료 후 이동할 페이지
+            location.href = 'page2.jsp'; // 로그인 완료 후 이동할 페이지
         }
     </script>
 </body>

@@ -1,0 +1,44 @@
+{
+    "locations": [
+        {
+            "name": "메가엠지씨커피월미도점",
+            "latitude": 37.4752927,
+            "longitude": 126.5986081
+        },
+        {
+            "name": "카페미투",
+            "latitude": 37.4772659,
+            "longitude": 126.5989588
+        },
+        {
+            "name": "커피올레",
+            "latitude": 37.4534107,
+            "longitude": 126.5986944
+        },
+        {
+            "name": "동인천다방",
+            "latitude": 37.4743366,
+            "longitude": 126.6321703
+        },
+        {
+            "name": "스타벅스인천공항랜드점",
+            "latitude": 37.4634593,
+            "longitude": 126.4417093
+        },
+        {
+            "name": "카페 잔피",
+            "latitude": 37.4748496,
+            "longitude": 126.6256735
+        },
+        {
+            "name": "카페오라",
+            "latitude": 37.4419552,
+            "longitude": 126.404777
+        },
+        {
+            "name": "까로치아",
+            "latitude": 37.4634593,
+            "longitude": 126.4417093
+        }
+    ]
+}
