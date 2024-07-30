@@ -1,5 +1,5 @@
 {
-    "trans_id": "0190fe14620d75fb87ecd04961007117",
+    "trans_id": "019100f178c37530bb201ccfa2dd21ad",
     "routes": [
         {
             "result_code": 0,
@@ -24,16 +24,16 @@
                     "max_y": 37.47941416758732
                 },
                 "fare": {
-                    "taxi": 10400,
+                    "taxi": 10500,
                     "toll": 0
                 },
                 "distance": 8593,
-                "duration": 1221
+                "duration": 1372
             },
             "sections": [
                 {
                     "distance": 8593,
-                    "duration": 1221,
+                    "duration": 1372,
                     "bound": {
                         "min_x": 126.59868998733563,
                         "min_y": 37.44983122830507,
@@ -88,8 +88,8 @@
                         {
                             "name": "월미로",
                             "distance": 815,
-                            "duration": 93,
-                            "traffic_speed": 39.0,
+                            "duration": 101,
+                            "traffic_speed": 36.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.60555379355435,
@@ -109,8 +109,8 @@
                         {
                             "name": "월미로",
                             "distance": 343,
-                            "duration": 84,
-                            "traffic_speed": 18.0,
+                            "duration": 89,
+                            "traffic_speed": 17.0,
                             "traffic_state": 2,
                             "vertexes": [
                                 126.61427610579877,
@@ -132,8 +132,8 @@
                         {
                             "name": "인중로",
                             "distance": 2076,
-                            "duration": 276,
-                            "traffic_speed": 33.0,
+                            "duration": 290,
+                            "traffic_speed": 30.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.61564065390998,
@@ -209,9 +209,9 @@
                         {
                             "name": "서해대로",
                             "distance": 1859,
-                            "duration": 198,
-                            "traffic_speed": 44.0,
-                            "traffic_state": 4,
+                            "duration": 301,
+                            "traffic_speed": 39.0,
+                            "traffic_state": 3,
                             "vertexes": [
                                 126.63340082764623,
                                 37.46509739823661,
@@ -274,8 +274,8 @@
                         {
                             "name": "축항대로",
                             "distance": 1923,
-                            "duration": 298,
-                            "traffic_speed": 37.0,
+                            "duration": 344,
+                            "traffic_speed": 38.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.62469005200921,
@@ -331,8 +331,8 @@
                         {
                             "name": "연안부두로",
                             "distance": 726,
-                            "duration": 147,
-                            "traffic_speed": 20.0,
+                            "duration": 122,
+                            "traffic_speed": 24.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.6052525942601,
@@ -404,7 +404,7 @@
                             "x": 126.61427610579877,
                             "y": 37.47848912521121,
                             "distance": 815,
-                            "duration": 93,
+                            "duration": 101,
                             "type": 2,
                             "guidance": "인천역 중구청 방면으로 우회전",
                             "road_index": 3
@@ -414,7 +414,7 @@
                             "x": 126.61564065390998,
                             "y": 37.475612837705434,
                             "distance": 343,
-                            "duration": 84,
+                            "duration": 89,
                             "type": 19,
                             "guidance": "오른쪽 2시 방향",
                             "road_index": 4
@@ -424,7 +424,7 @@
                             "x": 126.63340082764623,
                             "y": 37.46509739823661,
                             "distance": 2076,
-                            "duration": 276,
+                            "duration": 290,
                             "type": 2,
                             "guidance": "인천IC 방면으로 우회전",
                             "road_index": 5
@@ -434,7 +434,7 @@
                             "x": 126.62469005200921,
                             "y": 37.45003927791204,
                             "distance": 1859,
-                            "duration": 198,
+                            "duration": 301,
                             "type": 2,
                             "guidance": "연안부두 방면으로 우회전",
                             "road_index": 6
@@ -444,7 +444,7 @@
                             "x": 126.6052525942601,
                             "y": 37.45727195533394,
                             "distance": 1923,
-                            "duration": 298,
+                            "duration": 344,
                             "type": 1,
                             "guidance": "연안부두 방면으로 좌회전",
                             "road_index": 7
@@ -454,7 +454,7 @@
                             "x": 126.59868998733563,
                             "y": 37.453410006944786,
                             "distance": 726,
-                            "duration": 147,
+                            "duration": 122,
                             "type": 101,
                             "guidance": "목적지",
                             "road_index": -1

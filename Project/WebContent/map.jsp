@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,8 +29,8 @@
         }
         #map {
             width: 100%;
-            height: 500px; /* 지도 높이 설정 */
-            margin-top: 30px; /* 상단 마진 추가 */
+            height: 500px;
+            margin-top: 30px;
             flex-shrink: 0;
         }
         .content {
@@ -40,10 +39,14 @@
             overflow-y: auto;
         }
         .custom-overlay {
+            background-color: white;
+            border: 1px solid black;
+            padding: 2px;
+            border-radius: 50%;
+            text-align: center;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
             color: black;
-            transform: translateY(-7px); /* 마커 숫자를 위로 이동 */
         }
     </style>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be712d0b2346430fa142e10072ba09b9"></script>

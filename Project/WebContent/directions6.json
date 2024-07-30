@@ -1,5 +1,5 @@
 {
-    "trans_id": "0190fe14638374c38de22e0deb21f972",
+    "trans_id": "019100f17a3e7727bbbf47101580db3a",
     "routes": [
         {
             "result_code": 0,
@@ -24,16 +24,16 @@
                     "max_y": 37.47757436744796
                 },
                 "fare": {
-                    "taxi": 32200,
+                    "taxi": 32600,
                     "toll": 5500
                 },
                 "distance": 37124,
-                "duration": 2632
+                "duration": 2697
             },
             "sections": [
                 {
                     "distance": 37124,
-                    "duration": 2632,
+                    "duration": 2697,
                     "bound": {
                         "min_x": 126.40480528112904,
                         "min_y": 37.4048348094125,
@@ -109,8 +109,8 @@
                         {
                             "name": "제물량로",
                             "distance": 126,
-                            "duration": 49,
-                            "traffic_speed": 18.0,
+                            "duration": 53,
+                            "traffic_speed": 16.0,
                             "traffic_state": 2,
                             "vertexes": [
                                 126.62272650944664,
@@ -124,9 +124,9 @@
                         {
                             "name": "신포로",
                             "distance": 117,
-                            "duration": 62,
-                            "traffic_speed": 10.0,
-                            "traffic_state": 2,
+                            "duration": 70,
+                            "traffic_speed": 9.0,
+                            "traffic_state": 1,
                             "vertexes": [
                                 126.62389140430273,
                                 37.47018594639263,
@@ -139,8 +139,8 @@
                         {
                             "name": "인중로",
                             "distance": 1301,
-                            "duration": 199,
-                            "traffic_speed": 18.0,
+                            "duration": 228,
+                            "traffic_speed": 13.0,
                             "traffic_state": 2,
                             "vertexes": [
                                 126.62307007719785,
@@ -196,9 +196,9 @@
                         {
                             "name": "제물량로",
                             "distance": 387,
-                            "duration": 67,
-                            "traffic_speed": 22.0,
-                            "traffic_state": 3,
+                            "duration": 93,
+                            "traffic_speed": 15.0,
+                            "traffic_state": 2,
                             "vertexes": [
                                 126.6360134361321,
                                 37.46439775492819,
@@ -244,8 +244,8 @@
                         {
                             "name": "아암대로",
                             "distance": 1412,
-                            "duration": 142,
-                            "traffic_speed": 52.0,
+                            "duration": 144,
+                            "traffic_speed": 49.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.63810960073945,
@@ -293,8 +293,8 @@
                         {
                             "name": "아암대로",
                             "distance": 1657,
-                            "duration": 102,
-                            "traffic_speed": 52.0,
+                            "duration": 112,
+                            "traffic_speed": 45.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.63129441169116,
@@ -314,8 +314,8 @@
                         {
                             "name": "아암대로",
                             "distance": 716,
-                            "duration": 110,
-                            "traffic_speed": 44.0,
+                            "duration": 115,
+                            "traffic_speed": 43.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.63438741230564,
@@ -350,7 +350,7 @@
                             "name": "제2경인고속도로",
                             "distance": 1720,
                             "duration": 75,
-                            "traffic_speed": 93.0,
+                            "traffic_speed": 94.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.63581312672545,
@@ -404,7 +404,7 @@
                         {
                             "name": "제2경인고속도로",
                             "distance": 14358,
-                            "duration": 608,
+                            "duration": 600,
                             "traffic_speed": 83.0,
                             "traffic_state": 4,
                             "vertexes": [
@@ -533,8 +533,8 @@
                         {
                             "name": "인천대교고속도로",
                             "distance": 1199,
-                            "duration": 76,
-                            "traffic_speed": 57.0,
+                            "duration": 69,
+                            "traffic_speed": 62.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.50952960881249,
@@ -598,8 +598,8 @@
                         {
                             "name": "인천대교고속도로",
                             "distance": 6523,
-                            "duration": 356,
-                            "traffic_speed": 71.0,
+                            "duration": 358,
+                            "traffic_speed": 68.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.50637824028948,
@@ -718,7 +718,7 @@
                             "name": "영종해안남로321번길",
                             "distance": 162,
                             "duration": 22,
-                            "traffic_speed": 33.0,
+                            "traffic_speed": 35.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.45640759833778,
@@ -740,8 +740,8 @@
                         {
                             "name": "공항서로84번길",
                             "distance": 2375,
-                            "duration": 162,
-                            "traffic_speed": 60.0,
+                            "duration": 159,
+                            "traffic_speed": 61.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.45517771762951,
@@ -791,8 +791,8 @@
                         {
                             "name": "공항서로",
                             "distance": 782,
-                            "duration": 80,
-                            "traffic_speed": 42.0,
+                            "duration": 78,
+                            "traffic_speed": 44.0,
                             "traffic_state": 4,
                             "vertexes": [
                                 126.43301205977342,
@@ -838,7 +838,7 @@
                         {
                             "name": "용유로",
                             "distance": 2192,
-                            "duration": 182,
+                            "duration": 180,
                             "traffic_speed": 14.0,
                             "traffic_state": 2,
                             "vertexes": [
@@ -909,8 +909,8 @@
                         {
                             "name": "남북로",
                             "distance": 745,
-                            "duration": 106,
-                            "traffic_speed": 22.0,
+                            "duration": 107,
+                            "traffic_speed": 21.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.41094839910235,
@@ -1003,7 +1003,7 @@
                             "x": 126.62389140430273,
                             "y": 37.47018594639263,
                             "distance": 126,
-                            "duration": 49,
+                            "duration": 53,
                             "type": 2,
                             "guidance": "월미도 방면으로 우회전",
                             "road_index": 4
@@ -1013,7 +1013,7 @@
                             "x": 126.62307007719785,
                             "y": 37.469356444541624,
                             "distance": 117,
-                            "duration": 62,
+                            "duration": 70,
                             "type": 1,
                             "guidance": "사동삼거리 방면으로 좌회전",
                             "road_index": 5
@@ -1023,7 +1023,7 @@
                             "x": 126.6360134361321,
                             "y": 37.46439775492819,
                             "distance": 1301,
-                            "duration": 199,
+                            "duration": 228,
                             "type": 19,
                             "guidance": "인천IC 방면으로 오른쪽 2시 방향",
                             "road_index": 6
@@ -1033,7 +1033,7 @@
                             "x": 126.63804756673967,
                             "y": 37.461312673786324,
                             "distance": 387,
-                            "duration": 67,
+                            "duration": 93,
                             "type": 2,
                             "guidance": "능해IC 방면으로 우회전",
                             "road_index": 7
@@ -1053,7 +1053,7 @@
                             "x": 126.63129441169116,
                             "y": 37.449187896294795,
                             "distance": 1412,
-                            "duration": 142,
+                            "duration": 144,
                             "type": 14,
                             "guidance": "송도경제자유구역 남동공단 인천공항 방면으로 고가도로 진입",
                             "road_index": 9
@@ -1063,7 +1063,7 @@
                             "x": 126.63438741230564,
                             "y": 37.4344648027387,
                             "distance": 1657,
-                            "duration": 102,
+                            "duration": 112,
                             "type": 17,
                             "guidance": "지하차도 옆길",
                             "road_index": 10
@@ -1073,7 +1073,7 @@
                             "x": 126.63581312672545,
                             "y": 37.42812899185957,
                             "distance": 716,
-                            "duration": 110,
+                            "duration": 115,
                             "type": 12,
                             "guidance": "인천대교 인천공항 방면으로 오른쪽에 고속도로 입구",
                             "road_index": 11
@@ -1093,7 +1093,7 @@
                             "x": 126.51297124165525,
                             "y": 37.47016645612953,
                             "distance": 14358,
-                            "duration": 608,
+                            "duration": 600,
                             "type": 84,
                             "guidance": "톨게이트 진입",
                             "road_index": 13
@@ -1123,7 +1123,7 @@
                             "x": 126.50637824028948,
                             "y": 37.46972288514829,
                             "distance": 1199,
-                            "duration": 76,
+                            "duration": 69,
                             "type": 6,
                             "guidance": "용유동 방면으로 오른쪽 방향",
                             "road_index": 16
@@ -1133,7 +1133,7 @@
                             "x": 126.45640759833778,
                             "y": 37.42928294302114,
                             "distance": 6523,
-                            "duration": 356,
+                            "duration": 358,
                             "type": 2,
                             "guidance": "우회전",
                             "road_index": 17
@@ -1153,7 +1153,7 @@
                             "x": 126.43301205977342,
                             "y": 37.435092933206676,
                             "distance": 2375,
-                            "duration": 162,
+                            "duration": 159,
                             "type": 1,
                             "guidance": "덕교,무의 방면으로 좌회전",
                             "road_index": 19
@@ -1163,7 +1163,7 @@
                             "x": 126.42672107056715,
                             "y": 37.43172967823612,
                             "distance": 782,
-                            "duration": 80,
+                            "duration": 78,
                             "type": 2,
                             "guidance": "왕산,을왕리해수욕장 방면으로 우회전",
                             "road_index": 20
@@ -1173,7 +1173,7 @@
                             "x": 126.41094839910235,
                             "y": 37.446682605625696,
                             "distance": 2192,
-                            "duration": 182,
+                            "duration": 180,
                             "type": 1,
                             "guidance": "을왕리해수욕장 방면으로 좌회전",
                             "road_index": 21
@@ -1183,7 +1183,7 @@
                             "x": 126.40480528112904,
                             "y": 37.44221194087069,
                             "distance": 745,
-                            "duration": 106,
+                            "duration": 107,
                             "type": 79,
                             "guidance": "용유동행정복지센터 방면으로 회전교차로에서 왼쪽 10시 방향",
                             "road_index": 22

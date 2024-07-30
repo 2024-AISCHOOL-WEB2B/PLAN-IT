@@ -1,5 +1,5 @@
 {
-    "trans_id": "0190fe14628d7053a9181af357b658a4",
+    "trans_id": "019100f1793974f59efb5b4b944f5045",
     "routes": [
         {
             "result_code": 0,
@@ -24,16 +24,16 @@
                     "max_y": 37.475212241418774
                 },
                 "fare": {
-                    "taxi": 9600,
+                    "taxi": 11000,
                     "toll": 0
                 },
                 "distance": 6409,
-                "duration": 1333
+                "duration": 1727
             },
             "sections": [
                 {
                     "distance": 6409,
-                    "duration": 1333,
+                    "duration": 1727,
                     "bound": {
                         "min_x": 126.63215925395235,
                         "min_y": 37.44945813955952,
@@ -44,9 +44,9 @@
                         {
                             "name": "연안부두로",
                             "distance": 32,
-                            "duration": 6,
-                            "traffic_speed": 19.0,
-                            "traffic_state": 2,
+                            "duration": 4,
+                            "traffic_speed": 28.0,
+                            "traffic_state": 3,
                             "vertexes": [
                                 126.59868998733563,
                                 37.453410006944786,
@@ -61,8 +61,8 @@
                         {
                             "name": "연안부두로",
                             "distance": 758,
-                            "duration": 219,
-                            "traffic_speed": 28.0,
+                            "duration": 239,
+                            "traffic_speed": 27.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.59839922403684,
@@ -104,9 +104,9 @@
                         {
                             "name": "축항대로",
                             "distance": 1898,
-                            "duration": 356,
-                            "traffic_speed": 23.0,
-                            "traffic_state": 3,
+                            "duration": 433,
+                            "traffic_speed": 18.0,
+                            "traffic_state": 2,
                             "vertexes": [
                                 126.6052525942601,
                                 37.45727195533394,
@@ -155,8 +155,8 @@
                         {
                             "name": "서해대로",
                             "distance": 1430,
-                            "duration": 269,
-                            "traffic_speed": 26.0,
+                            "duration": 495,
+                            "traffic_speed": 22.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.62430513895887,
@@ -210,9 +210,9 @@
                         {
                             "name": "서해대로",
                             "distance": 684,
-                            "duration": 140,
-                            "traffic_speed": 11.0,
-                            "traffic_state": 2,
+                            "duration": 167,
+                            "traffic_speed": 9.0,
+                            "traffic_state": 1,
                             "vertexes": [
                                 126.63180815513907,
                                 37.460690964951056,
@@ -247,8 +247,8 @@
                         {
                             "name": "제물량로",
                             "distance": 781,
-                            "duration": 155,
-                            "traffic_speed": 24.0,
+                            "duration": 173,
+                            "traffic_speed": 21.0,
                             "traffic_state": 3,
                             "vertexes": [
                                 126.63480221190986,
@@ -300,8 +300,8 @@
                         {
                             "name": "우현로",
                             "distance": 663,
-                            "duration": 142,
-                            "traffic_speed": 16.0,
+                            "duration": 149,
+                            "traffic_speed": 15.0,
                             "traffic_state": 2,
                             "vertexes": [
                                 126.62743131478867,
@@ -339,9 +339,9 @@
                         {
                             "name": "참외전로",
                             "distance": 141,
-                            "duration": 39,
-                            "traffic_speed": 24.0,
-                            "traffic_state": 3,
+                            "duration": 60,
+                            "traffic_speed": 15.0,
+                            "traffic_state": 2,
                             "vertexes": [
                                 126.63130673880164,
                                 37.47517365993389,
@@ -387,7 +387,7 @@
                             "x": 126.59839922403684,
                             "y": 37.45324437401172,
                             "distance": 32,
-                            "duration": 6,
+                            "duration": 4,
                             "type": 3,
                             "guidance": "제2경인고속도로 경인고속도로 방면으로 유턴",
                             "road_index": 1
@@ -397,7 +397,7 @@
                             "x": 126.6052525942601,
                             "y": 37.45727195533394,
                             "distance": 758,
-                            "duration": 219,
+                            "duration": 239,
                             "type": 2,
                             "guidance": "인천IC 방면으로 우회전",
                             "road_index": 2
@@ -407,7 +407,7 @@
                             "x": 126.62430513895887,
                             "y": 37.44945813955952,
                             "distance": 1898,
-                            "duration": 356,
+                            "duration": 433,
                             "type": 1,
                             "guidance": "제2외곽고속도로 방면으로 좌회전",
                             "road_index": 3
@@ -417,7 +417,7 @@
                             "x": 126.63180815513907,
                             "y": 37.460690964951056,
                             "distance": 1430,
-                            "duration": 269,
+                            "duration": 495,
                             "type": 6,
                             "guidance": "옹진군청 방면으로 오른쪽 방향",
                             "road_index": 4
@@ -427,7 +427,7 @@
                             "x": 126.63480221190986,
                             "y": 37.46635701554752,
                             "distance": 684,
-                            "duration": 140,
+                            "duration": 167,
                             "type": 1,
                             "guidance": "중구청 방면으로 좌회전",
                             "road_index": 5
@@ -437,7 +437,7 @@
                             "x": 126.62743131478867,
                             "y": 37.47010097954949,
                             "distance": 781,
-                            "duration": 155,
+                            "duration": 173,
                             "type": 2,
                             "guidance": "동인천역 방면으로 우회전",
                             "road_index": 6
@@ -447,7 +447,7 @@
                             "x": 126.63130673880164,
                             "y": 37.47517365993389,
                             "distance": 663,
-                            "duration": 142,
+                            "duration": 149,
                             "type": 2,
                             "guidance": "배다리사거리 방면으로 우회전",
                             "road_index": 7
@@ -457,7 +457,7 @@
                             "x": 126.63240857435183,
                             "y": 37.47426737354697,
                             "distance": 141,
-                            "duration": 39,
+                            "duration": 60,
                             "type": 2,
                             "guidance": "우회전",
                             "road_index": 8
