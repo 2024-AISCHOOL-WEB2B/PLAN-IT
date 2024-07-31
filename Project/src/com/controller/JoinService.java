@@ -25,12 +25,12 @@ public class JoinService extends HttpServlet {
 		String q4 = request.getParameter("q4");
 		String q5 = request.getParameter("q5");
 		
-		System.out.println(q1 + "dddd");
-		System.out.println(q2 + "dddd");
-		System.out.println(q3 + "dddd");
-		System.out.println(q4 + "dddd");
-		System.out.println(q5 + "dddd");
-		
+		System.out.println("q1: " + q1);  // 수정
+		System.out.println("q2: " + q2);  // 수정
+		System.out.println("q3: " + q3);  // 수정
+		System.out.println("q4: " + q4);  // 수정
+		System.out.println("q5: " + q5);  // 수정
+
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");

@@ -135,7 +135,7 @@
 
         $(document).ready(function(){
             $.ajax({
-                url: "http://192.168.20.168:5000/search",
+                url: "http://192.168.21.108:5000/search",
                 headers: {
                     'Accept': 'application/json;charset=UTF-8',
                     'Content-Type': 'application/json; charset=UTF-8'
