@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="EUC-KR">
     <meta name="viewport" content="width=360, height=740, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>íšŒì›ê°€ì…</title>
+    <title>È¸¿ø°¡ÀÔ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,6 +30,7 @@
         }
         .logo {
             margin-bottom: 20px;
+           	color: #8ab7ff;
         }
         .logo img {
             width: 100px;
@@ -87,50 +88,46 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Naver_Logotype.svg/1024px-Naver_Logotype.svg.png" alt="Naver Logo">
+            <h1>ÇÃ·£ÀÕ</h1>
         </div>
-        <form id="signup-form"></form>
+        <form id="signup-form" action="page1survey2.jsp" method="POST" onsubmit="saveSignupData()">
             <div class="form-container">
-                <input type="text" id="username" name="username" placeholder="ì•„ì´ë””">
-                <input type="password" id="password" name="password" placeholder="ë¹„ë°€ë²ˆí˜¸">
-                <input type="text" id="name" name="name" placeholder="ì´ë¦„">
-                <input type="text" id="birthdate" name="birthdate" placeholder="ìƒë…„ì›”ì¼ 8ìë¦¬">
-                <input type="text" id="phone" name="phone" placeholder="íœ´ëŒ€ì „í™”ë²ˆí˜¸">
+                <input type="text" id="username" name="id" placeholder="¾ÆÀÌµğ" required>
+                <input type="password" id="password" name="pw" placeholder="ºñ¹Ğ¹øÈ£" required>
+                <input type="text" id="name" name="name" placeholder="ÀÌ¸§" required>
+                <input type="text" id="birthdate" name="birth" placeholder="»ı³â¿ùÀÏ 8ÀÚ¸®" required>
+                <input type="text" id="phone" name="phone" placeholder="ÈŞ´ëÀüÈ­¹øÈ£" required>
                 
                 <div class="radio-container">
-                    <input type="radio" id="male" name="gender" value="male" checked>
-                    <label for="male">ë‚¨ì</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">ì—¬ì</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">³²ÀÚ</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">¿©ÀÚ</label>
                 </div>
                 <div class="radio-container">
-                    <input type="radio" id="domestic" name="nationality" value="domestic" checked>
-                    <label for="domestic">ë‚´êµ­ì¸</label>
-                    <input type="radio" id="foreign" name="nationality" value="foreign">
-                    <label for="foreign">ì™¸êµ­ì¸</label>
+                    <input type="radio" id="domestic" name="kf" value="domestic" required>
+                    <label for="domestic">³»±¹ÀÎ</label>
+                    <input type="radio" id="foreign" name="kf" value="foreign" required>
+                    <label for="foreign">¿Ü±¹ÀÎ</label>
                 </div>
+            
         
                 <div class="radio-container">
-                    <input type="radio" id="single" name="marital_status" value="single" checked>
-                    <label for="single">ë¯¸í˜¼</label>
-                    <input type="radio" id="married" name="marital_status" value="married">
-                    <label for="married">ê¸°í˜¼</label>
+                    <input type="radio" id="single" name="marry" value="single" required>
+                    <label for="single">¹ÌÈ¥</label>
+                    <input type="radio" id="married" name="marry" value="married" required>
+                    <label for="married">±âÈ¥</label>
                 </div>
                 
-                <button onclick="location.href='page1survey.html'">ì„ í˜¸ë„ ì¡°ì‚¬í•˜ê¸°</button>
-                <button type="submit" onclick="location.href='page1login.html'">íšŒì›ê°€ì… ì™„ë£Œ</button>
+                <button type="submit">¼±È£µµ Á¶»çÇÏ±â</button>
             </div>
+            
             <div class="footer">
-                <p>&copy; Team ì§„ì‹¬ìœ¼ë¡œ í•œëŒ€ìœ  . All Rights Reserved.</p>
+                <p>&copy; Team Áø½ÉÀ¸·Î ÇÑ´ëÀ¯ . All Rights Reserved.</p>
             </div>
         </form>
     </div>
-    <script>
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.');
-            
-        });
-    </script>
+
 </body>
+
 </html>

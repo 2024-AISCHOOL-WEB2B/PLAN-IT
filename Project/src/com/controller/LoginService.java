@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import com.model.MemberDAO;
 import com.model.MemberDTO;
 
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/LoginService")
+public class LoginService extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 			System.out.println("로그인 실패");
 		}
 		
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("page2.jsp");
 	}
 
 }

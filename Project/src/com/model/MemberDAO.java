@@ -66,6 +66,11 @@ public class MemberDAO {
 			
 			cnt = psmt.executeUpdate();
 			
+			if (cnt > 0) {
+				System.out.println("추가 성공");
+			} else {
+				System.out.println("추가 실패");
+			}
 			
 		} catch (SQLException e) {
 			System.out.println("db오류");

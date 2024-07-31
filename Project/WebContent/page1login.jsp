@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="EUC-KR">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=360, height=740, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Naver Login</title>
     <style>
@@ -79,32 +79,38 @@
 </head>
 <body>
     <div class="container">
-        <!-- ÇÃ·£ÀÕ ·Î°í ´ë½Å µ¿¿µ»ó -->
+        <!-- í”Œëœì‡ ë¡œê³  ëŒ€ì‹  ë™ì˜ìƒ -->
         <div class="logo">
-            <h1>ÇÃ·£ÀÕ</h1>
+            <h1>í”Œëœì‡</h1>
             <img src="https://i.pinimg.com/originals/62/ad/06/62ad0691cc84da10dc0e3653f16aace2.gif" alt="Travel GIF">
         </div>
         
-        <!-- ¾ÆÀÌµğ ºñ¹Ğ¹øÈ£ ÀÔ·Â -->
+        <!-- ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ -->
         <div class="form-container">
-			<form action="LoginService" method="POST">	
-	        <!-- ·Î±×ÀÎ ¹öÆ° -->
-	        	<input type="text" id="username" name="id" placeholder="¾ÆÀÌµğ ¶Ç´Â ÀüÈ­¹øÈ£">
-	            <input type="password" id="password" name="pw" placeholder="ºñ¹Ğ¹øÈ£">
-	        	<button type="submit" class="login-button">·Î±×ÀÎ</button>
-	        </form>
+            <input type="text" id="username" name="username" placeholder="ì•„ì´ë”” ë˜ëŠ” ì „í™”ë²ˆí˜¸">
+            <input type="password" id="password" name="password" placeholder="ë¹„ë°€ë²ˆí˜¸">
         </div>
         
 
+        <!-- ë¡œê·¸ì¸ ë²„íŠ¼ -->
+        <button class="login-button" onclick="login()">ë¡œê·¸ì¸</button>
+        
         <div class="links">
-            <a href="#">ºñ¹Ğ¹øÈ£ Ã£±â</a>
-            <a href="#">¾ÆÀÌµğ Ã£±â</a>
-            <a href="page1sign.jsp">È¸¿ø°¡ÀÔ</a>
+            <a href="#">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
+            <a href="#">ì•„ì´ë”” ì°¾ê¸°</a>
+            <a href="page1sign.jsp">íšŒì›ê°€ì…</a>
         </div>
         <div class="footer">
-            <p>&copy; Team Áø½ÉÀ¸·Î ÇÑ´ëÀ¯. All Rights Reserved.</p>
+            <p>&copy; Team PlanIt. All Rights Reserved.</p>
         </div>
     </div>
 
+    <script>
+        function login() {
+            alert('ë¡œê·¸ì¸ ì™„ë£Œ ');
+            
+            location.href = 'page2.jsp'; // ë¡œê·¸ì¸ ì™„ë£Œ í›„ ì´ë™í•  í˜ì´ì§€
+        }
+    </script>
 </body>
 </html>
