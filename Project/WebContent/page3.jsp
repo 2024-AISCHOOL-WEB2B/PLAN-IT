@@ -74,15 +74,17 @@
         
         <img src="https://mblogthumb-phinf.pstatic.net/MjAyMzA3MDRfMjc5/MDAxNjg4NDc5MzIxNTE1.Yfgbc73pBoa4ZiCYRhauaBAxEI-EwcNCxznmheNDrUsg.z66vw6kf-1H_5mJwFdMpN_lL06QHPx19W7806KozNcEg.GIF.amazonian3/%EB%AA%A9%ED%8F%AC.gif?type=w800" alt="여행 이미지">
         <p><span class="bold">플랜잇</span>을 통해 인기있는 여행지를 가장 빠르게 떠나세요.</p>
-        <select id="regionSelect">
-            <option value="" disabled selected>어디로 여행을 떠나시나요?</option>
-            <option value="Seoul">서울</option>
-            <option value="Busan">부산</option>
-            <option value="Jeju">제주</option>
-            <option value="Mokpo">목포</option>
-            <!-- 추가 지역을 여기에 추가할 수 있습니다 -->
-        </select>
-        <button id = "click" onclick="goToMap()">여행 시작</button>
+        <form action="flaskService">
+	        <select id="regionSelect">
+	            <option value="" disabled selected>어디로 여행을 떠나시나요?</option>
+	            <option value="Seoul">서울</option>
+	            <option value="Busan">부산</option>
+	            <option value="Jeju">제주</option>
+	            <option value="Mokpo">목포</option>
+	            <!-- 추가 지역을 여기에 추가할 수 있습니다 -->
+	        </select>
+	        <button type="submit" id = "click" onclick="goToMap()">여행 시작</button>
+	     </form>
     </div>
     <script>
         function goToMap() {
@@ -94,27 +96,7 @@
             }
         }
         
-       	$('#click').on('click', function(){
-       		
-       		var loc = $("#text").val();
-       		
-       		$.ajax({
-       			url : "http://192.168.21.108:5000/search",
-       			headers: {
-       				'Accept': 'application/json;charset=UTF-8',
-       				'Content-Type': 'application/json; charset=UTF-8'
-    			}, 
-       			type : "get",
-       			data : {"loc" : loc},
-       			dataType : "json",
-       			success : function(data){
-       				console.log(data.result);
-       			},
-       			error : function(e){
-       				console.log(e);
-       			}
-       		});
-       	});
+
     </script>
 </body>
 </html>
