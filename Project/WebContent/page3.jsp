@@ -82,7 +82,7 @@
             <option value="Mokpo">목포</option>
             <!-- 추가 지역을 여기에 추가할 수 있습니다 -->
         </select>
-        <button onclick="goToMap()">여행 시작</button>
+        <button id = "click" onclick="goToMap()">여행 시작</button>
     </div>
     <script>
         function goToMap() {
@@ -93,6 +93,28 @@
                 alert('지역을 선택해주세요.');
             }
         }
+        
+       	$('#click').on('click', function(){
+       		
+       		var loc = $("#text").val();
+       		
+       		$.ajax({
+       			url : "http://192.168.21.108:5000/search",
+       			headers: {
+       				'Accept': 'application/json;charset=UTF-8',
+       				'Content-Type': 'application/json; charset=UTF-8'
+    			}, 
+       			type : "get",
+       			data : {"loc" : loc},
+       			dataType : "json",
+       			success : function(data){
+       				console.log(data.result);
+       			},
+       			error : function(e){
+       				console.log(e);
+       			}
+       		});
+       	});
     </script>
 </body>
 </html>

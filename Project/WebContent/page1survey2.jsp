@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="EUC-KR">
     <meta name="viewport" content="width=360, height=740, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ì—¬í–‰ ì„ í˜¸ë„ ì¡°ì‚¬</title>
+    <title>¿©Çà ¼±È£µµ Á¶»ç</title>
     <style>
         html, body {
             font-family: Arial, sans-serif;
@@ -17,53 +16,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #fff;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 360px;
-            height: 740px;
-            max-width: 90%;
-            max-height: 90%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.5s;
-            overflow-y: auto;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
         }
         .container {
-            width: 100%;
+            width: 360px;
             background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            overflow-y: auto;
         }
         .container h1 {
             margin-bottom: 20px;
@@ -105,83 +65,80 @@
     </style>
 </head>
 <body>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container">
-                <h1>ì—¬í–‰ ì„ í˜¸ë„ ì¡°ì‚¬</h1>
-                <form id="survey-form">
-                    <div class="question">
-                        <label for="q1">1. ì–´ëŠ í™˜ê²½ì„ ë” ì„ í˜¸í•˜ì‹œë‚˜ìš”?</label>
-                        <select id="q1" name="q1">
-                            <option value="mountain">ì‚°</option>
-                            <option value="sea">ë°”ë‹¤</option>
-                        </select>
-                    </div>
-                    <div class="question">
-                        <label for="q2">2. í‰ì†Œ í™œë™ ìˆ˜ì¤€ì€ ì–´ëŠ ì •ë„ ì…ë‹ˆê¹Œ?</label>
-                        <select id="q2" name="q2">
-                            <option value="high">ê³ ê°•ë„ í™œë™(ìŠ¤í¬ì¸ , ëª¨í—˜)</option>
-                            <option value="medium">ì¤‘ê°„ ê°•ë„ í™œë™</option>
-                            <option value="low">ì €ê°•ë„ í™œë™(íœ´ì‹, ë…ì„œ)</option>
-                        </select>
-                    </div>
-                    <div class="question">
-                        <label for="q3">3. ì£¼ë¡œ ëˆ„êµ¬ì™€ í•¨ê»˜ ì—¬í–‰í•˜ì‹œë‚˜ìš”?</label>
-                        <select id="q3" name="q3">
-                            <option value="alone">í˜¼ì</option>
-                            <option value="friends">ì¹œêµ¬</option>
-                            <option value="partner">ì—°ì¸</option>
-                            <option value="family">ê°€ì¡±</option>
-                        </select>
-                    </div>
-                    <div class="question">
-                        <label for="q4">4. ì£¼ë¡œ ì—¬í–‰ í•˜ëŠ” ë°©ë²•ì€ ë¬´ì—‡ì…ë‹ˆê¹Œ?</label>
-                        <select id="q4" name="q4">
-                            <option value="public_transport">ë„ë³´, ëŒ€ì¤‘êµí†µ</option>
-                            <option value="car">ìë™ì°¨</option>
-                        </select>
-                    </div>
-                    <div class="question">
-                        <label for="q5">5. ì—¬í–‰ í•  ë•Œ ê°€ì¥ ì¤‘ìš”í•˜ê²Œ ìƒê°í•˜ëŠ” ê²ƒì€?</label>
-                        <select id="q5" name="q5">
-                            <option value="cost">ë¹„ìš©</option>
-                            <option value="accommodation">ìˆ™ì†Œ</option>
-                            <option value="food">ë§›ì§‘</option>
-                            <option value="experiences">ì²´í—˜</option>
-                            <option value="relaxation">íœ´ì‹</option>
-                        </select>
-                    </div>
-                    <div class="button-container">
-                        <button type="submit">ì œì¶œ</button>
-                    </div>
-                </form>
+
+        <% String id = request.getParameter("id");
+           String pw = request.getParameter("pw");            
+           String name = request.getParameter("name");            
+           String birth = request.getParameter("birth");            
+           String phone = request.getParameter("phone");            
+           String gender = request.getParameter("gender");            
+           String kf = request.getParameter("kf");            
+           String marry = request.getParameter("marry");
+        %>
+    <div class="container">
+        <h1>¿©Çà ¼±È£µµ Á¶»ç</h1> <!-- id="survey-form" -->
+        <form  action="JoinService" method="get">
+        	<input type="hidden" name="id" value="<%= id %>">
+        	<input type="hidden" name="pw" value="<%= pw %>">
+        	<input type="hidden" name="name" value="<%= name %>">
+        	<input type="hidden" name="birth" value="<%= birth %>">
+        	<input type="hidden" name="phone" value="<%= phone %>">
+        	<input type="hidden" name="gender" value="<%= gender %>">
+        	<input type="hidden" name="kf" value="<%= kf %>">
+        	<input type="hidden" name="marry" value="<%= marry %>">
+        
+          <div class="question">
+                <label for="q1">1. ¾î´À È¯°æÀ» ´õ ¼±È£ÇÏ½Ã³ª¿ä?</label>
+                <select id="q1" name="q1">
+                    <option value="mountain">»ê</option>
+                    <option value="sea">¹Ù´Ù</option>
+                </select>
+            </div> 
+            <div class="question">
+                <label for="q2">2. Æò¼Ò È°µ¿ ¼öÁØÀº ¾î´À Á¤µµ ÀÔ´Ï±î?</label>
+                <select id="q2" name="q2">
+                    <option value="high">°í°­µµ È°µ¿(½ºÆ÷Ã÷, ¸ğÇè)</option>
+                    <option value="medium">Áß°£ °­µµ È°µ¿</option>
+                    <option value="low">Àú°­µµ È°µ¿(ÈŞ½Ä, µ¶¼­)</option>
+                </select>
             </div>
-        </div>
+            <div class="question">
+                <label for="q3">3. ÁÖ·Î ´©±¸¿Í ÇÔ²² ¿©ÇàÇÏ½Ã³ª¿ä?</label>
+                <select id="q3" name="q3">
+                    <option value="alone">È¥ÀÚ</option>
+                    <option value="friends">Ä£±¸</option>
+                    <option value="partner">¿¬ÀÎ</option>
+                    <option value="family">°¡Á·</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q4">4. ÁÖ·Î ¿©Çà ÇÏ´Â ¹æ¹ıÀº ¹«¾ùÀÔ´Ï±î?</label>
+                <select id="q4" name="q4">
+                    <option value="public_transport">µµº¸, ´ëÁß±³Åë</option>
+                    <option value="car">ÀÚµ¿Â÷</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">5. ¿©Çà ÇÒ ¶§ °¡Àå Áß¿äÇÏ°Ô »ı°¢ÇÏ´Â °ÍÀº?</label>
+                <select id="q5" name="q5">
+                    <option value="cost">ºñ¿ë</option>
+                    <option value="accommodation">¼÷¼Ò</option>
+                    <option value="food">¸ÀÁı</option>
+                    <option value="experiences">Ã¼Çè</option>
+                    <option value="relaxation">ÈŞ½Ä</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button type="submit">È¸¿ø°¡ÀÔ</button>
+            </div>
+        </form>
     </div>
-
+    
     <script>
-        const modal = document.getElementById("myModal");
-        const span = document.getElementsByClassName("close")[0];
-
-        window.onload = function() {
-            modal.style.display = "flex";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        document.getElementById('survey-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+       /*  document.getElementById('survey-form').addEventListener('submit', function(event) {
+            // event.preventDefault();
             
-            // í¼ ë°ì´í„° ì €ì¥
+            // Æû µ¥ÀÌÅÍ ÀúÀå
             const formData = {
                 q1: document.getElementById('q1').value,
                 q2: document.getElementById('q2').value,
@@ -192,11 +149,10 @@
 
             localStorage.setItem('surveyData', JSON.stringify(formData));
 
-            alert('ì„ í˜¸ë„ê°€ ì—¬í–‰ì¼ì •ì— ë°˜ì˜ì¤‘ì…ë‹ˆë‹¤...ing ');
+            alert('¼±È£µµ°¡ ¿©ÇàÀÏÁ¤¿¡ ¹İ¿µÁßÀÔ´Ï´Ù...ing 'formData[0]);
 
-            modal.style.display = "none";
-            location.href = 'page1sign.jsp';
-        });
+            // location.href = 'page1sign.jsp';
+        }); */
     </script>
 </body>
 </html>

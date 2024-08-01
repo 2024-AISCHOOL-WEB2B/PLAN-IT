@@ -45,26 +45,39 @@ public class PreferenceDAO {
 		}
 	}
 
-    public int preferenceAdd(PreferenceDTO dto) {
-        int cnt = 0;
-        getConnection();
-        try {
-            String sql = "INSERT INTO PREFERENCE (QUESTION_NUM, QUESTION_AW, PR_FK) VALUES (?, ?, ?)";
-            psmt = con.prepareStatement(sql);
-            psmt.setString(1, dto.getQuestionNum());
-            psmt.setString(2, dto.getQuestionAw());
-            psmt.setString(3, dto.getPrFk());
 
-            cnt = psmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("db오류");
-        } finally {
-            close();
-        }
-        
-        return cnt;
-    }
+	public int preferenceAdd(PreferenceDTO prdto) {
+	    int prcnt = 0;
+	    String[] arr2 = {"q1","q2","q3","q4","q5"};
+	    String[] arr = {prdto.getQ1(),prdto.getQ2(),prdto.getQ3(),prdto.getQ4(),prdto.getQ5()};
+	    getConnection(); // 연결 한 번만 호출
+	    try {
+	    	for(int i = 0 ; i < 5; i++) {
+	    	    String sql = "INSERT INTO PREFERENCE VALUES (?, ?, ?)";
+	    	    psmt = con.prepareStatement(sql);
+	    	    psmt.setString(1, arr2[i]);
+	    	    psmt.setString(2, arr[i]);
+	    	    psmt.setString(3, prdto.getId());
+
+	    	    // 추가되는 값 로그 출력
+	    	    System.out.println("Inserting: " + arr2[i] + ", " + arr[i] + ", " + prdto.getId());
+	    	    
+	    	    prcnt += psmt.executeUpdate();
+	    	}
+
+
+	    } catch (SQLException e) {
+	        System.out.println("db 오류: " + e.getMessage());  // 오류 메시지 출력
+	        e.printStackTrace(); // 전체 스택 트레이스 출력
+
+	    } finally {
+	        close();
+	    }
+
+	    return prcnt;
+	}
+
+	}
 	
 	
-}
+

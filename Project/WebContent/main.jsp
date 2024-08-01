@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="EUC-KR">
     <meta name="viewport" content="width=360, height=740, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Naver Login</title>
     <style>
@@ -79,40 +79,32 @@
 </head>
 <body>
     <div class="container">
-        <!-- í”Œëœì‡ ë¡œê³  ëŒ€ì‹  ë™ì˜ìƒ -->
+        <!-- ÇÃ·£ÀÕ ·Î°í ´ë½Å µ¿¿µ»ó -->
         <div class="logo">
-            <h1>í”Œëœì‡</h1>
+            <h1>ÇÃ·£ÀÕ</h1>
             <img src="https://i.pinimg.com/originals/62/ad/06/62ad0691cc84da10dc0e3653f16aace2.gif" alt="Travel GIF">
         </div>
         
-        <!-- ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ -->
+        <!-- ¾ÆÀÌµğ ºñ¹Ğ¹øÈ£ ÀÔ·Â -->
         <div class="form-container">
-        	<form action="LoginServlet" method="post">
-            	<input type="text" id="username" name="id" placeholder="ì•„ì´ë”” ë˜ëŠ” ì „í™”ë²ˆí˜¸">
-            	<input type="password" id="password" name="pw" placeholder="ë¹„ë°€ë²ˆí˜¸">
-        	</form>
+			<form action="LoginService" method="POST">	
+	        <!-- ·Î±×ÀÎ ¹öÆ° -->
+	        	<input type="text" id="username" name="id" placeholder="¾ÆÀÌµğ ¶Ç´Â ÀüÈ­¹øÈ£">
+	            <input type="password" id="password" name="pw" placeholder="ºñ¹Ğ¹øÈ£">
+	        	<button type="submit" class="login-button">·Î±×ÀÎ</button>
+	        </form>
         </div>
         
-			
-        <!-- ë¡œê·¸ì¸ ë²„íŠ¼ -->
-        <button class="login-button" onclick="login()">ë¡œê·¸ì¸</button>
-        
+
         <div class="links">
-            <a href="#">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
-            <a href="#">ì•„ì´ë”” ì°¾ê¸°</a>
-            <a href="page1sign.html">íšŒì›ê°€ì…</a>
+            <a href="#">ºñ¹Ğ¹øÈ£ Ã£±â</a>
+            <a href="#">¾ÆÀÌµğ Ã£±â</a>
+            <a href="page1sign.jsp">È¸¿ø°¡ÀÔ</a>
         </div>
         <div class="footer">
-            <p>&copy; Team ì§„ì‹¬ìœ¼ë¡œ í•œëŒ€ìœ . All Rights Reserved.</p>
+            <p>&copy; Team Áø½ÉÀ¸·Î ÇÑ´ëÀ¯. All Rights Reserved.</p>
         </div>
     </div>
 
-    <script>
-        function login() {
-            alert('ë¡œê·¸ì¸ ì™„ë£Œ â¤ï¸');
-            
-            location.href = 'page2select.html'; // ë¡œê·¸ì¸ ì™„ë£Œ í›„ ì´ë™í•  í˜ì´ì§€
-        }
-    </script>
 </body>
 </html>

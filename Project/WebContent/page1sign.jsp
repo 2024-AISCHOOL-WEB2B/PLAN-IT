@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="EUC-KR">
     <meta name="viewport" content="width=360, height=740, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>íšŒì›ê°€ì…</title>
+    <title>È¸¿ø°¡ÀÔ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -88,89 +88,48 @@
 <body>
     <div class="container">
         <div class="logo">
-            <h1>í”Œëœì‡</h1>
+            <h1>ÇÃ·£ÀÕ</h1>
         </div>
-        <form id="signup-form">
+        <form id="signup-form" action="page1survey2.jsp" method="POST" onsubmit="saveSignupData()">
             <div class="form-container">
-                <input type="text" id="username" name="username" placeholder="ì•„ì´ë””">
-                <input type="password" id="password" name="password" placeholder="ë¹„ë°€ë²ˆí˜¸">
-                <input type="text" id="name" name="name" placeholder="ì´ë¦„">
-                <input type="text" id="birthdate" name="birthdate" placeholder="ìƒë…„ì›”ì¼ 8ìë¦¬">
-                <input type="text" id="phone" name="phone" placeholder="íœ´ëŒ€ì „í™”ë²ˆí˜¸">
+                <input type="text" id="username" name="id" placeholder="¾ÆÀÌµğ" required>
+                <input type="password" id="password" name="pw" placeholder="ºñ¹Ğ¹øÈ£" required>
+                <input type="text" id="name" name="name" placeholder="ÀÌ¸§" required>
+                <input type="text" id="birthdate" name="birth" placeholder="»ı³â¿ùÀÏ 8ÀÚ¸®" required>
+                <input type="text" id="phone" name="phone" placeholder="ÈŞ´ëÀüÈ­¹øÈ£" required>
                 
                 <div class="radio-container">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">ë‚¨ì</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">ì—¬ì</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">³²ÀÚ</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">¿©ÀÚ</label>
                 </div>
                 <div class="radio-container">
-                    <input type="radio" id="domestic" name="nationality" value="domestic">
-                    <label for="domestic">ë‚´êµ­ì¸</label>
-                    <input type="radio" id="foreign" name="nationality" value="foreign">
-                    <label for="foreign">ì™¸êµ­ì¸</label>
+                    <input type="radio" id="domestic" name="kf" value="domestic" required>
+                    <label for="domestic">³»±¹ÀÎ</label>
+                    <input type="radio" id="foreign" name="kf" value="foreign" required>
+                    <label for="foreign">¿Ü±¹ÀÎ</label>
                 </div>
+            
         
                 <div class="radio-container">
-                    <input type="radio" id="single" name="marital_status" value="single">
-                    <label for="single">ë¯¸í˜¼</label>
-                    <input type="radio" id="married" name="marital_status" value="married">
-                    <label for="married">ê¸°í˜¼</label>
+                    <input type="radio" id="single" name="marry" value="single" required>
+                    <label for="single">¹ÌÈ¥</label>
+                    <input type="radio" id="married" name="marry" value="married" required>
+                    <label for="married">±âÈ¥</label>
                 </div>
                 
-                <button type="button" onclick="saveSignupData()">ì„ í˜¸ë„ ì¡°ì‚¬í•˜ê¸°</button>
-                <button type="submit" onclick="location.href='page1login.jsp'">íšŒì›ê°€ì… ì™„ë£Œ</button>
+                <button type="submit">¼±È£µµ Á¶»çÇÏ±â</button>
             </div>
+            
             <div class="footer">
+
                 <p>&copy; Team PlanIt. All Rights Reserved.</p>
+
             </div>
         </form>
     </div>
-    <script>
-        // ì €ì¥ëœ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” í•¨ìˆ˜
-        function loadSignupData() {
-            const referrer = document.referrer;
-            if (referrer.includes('page1survey2.jsp')) {
-                const signupData = JSON.parse(localStorage.getItem('signupData'));
-                if (signupData) {
-                    document.getElementById('username').value = signupData.username;
-                    document.getElementById('password').value = signupData.password;
-                    document.getElementById('name').value = signupData.name;
-                    document.getElementById('birthdate').value = signupData.birthdate;
-                    document.getElementById('phone').value = signupData.phone;
-                    document.getElementById(signupData.gender).checked = true;
-                    document.getElementById(signupData.nationality).checked = true;
-                    document.getElementById(signupData.marital_status).checked = true;
-                }
-            } else {
-                localStorage.removeItem('signupData');
-            }
-        }
 
-        // ë°ì´í„°ë¥¼ ì €ì¥í•˜ëŠ” í•¨ìˆ˜
-        function saveSignupData() {
-            const signupData = {
-                username: document.getElementById('username').value,
-                password: document.getElementById('password').value,
-                name: document.getElementById('name').value,
-                birthdate: document.getElementById('birthdate').value,
-                phone: document.getElementById('phone').value,
-                gender: document.querySelector('input[name="gender"]:checked').id,
-                nationality: document.querySelector('input[name="nationality"]:checked').id,
-                marital_status: document.querySelector('input[name="marital_status"]:checked').id,
-            };
-
-            localStorage.setItem('signupData', JSON.stringify(signupData));
-            location.href = 'page1survey2.jsp';
-        }
-
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.');
-        });
-
-        // í˜ì´ì§€ ë¡œë“œ ì‹œ ì €ì¥ëœ ë°ì´í„° ë¶ˆëŸ¬ì˜¤ê¸°
-        window.onload = loadSignupData;
-    </script>
 </body>
+
 </html>

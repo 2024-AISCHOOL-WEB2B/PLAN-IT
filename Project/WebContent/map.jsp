@@ -286,7 +286,7 @@
 
         function reinitializeData() {
             $.ajax({
-                url: 'http://192.168.20.111:5000/reinitialize',
+                url: 'http://192.168.21.208:5000/reinitialize',
                 headers: {
                     'Accept': 'application/json;charset=UTF-8',
                     'Content-Type': 'application/json; charset=UTF-8'
@@ -310,7 +310,7 @@
 
         $(document).ready(function(){
             $.ajax({
-                url: 'http://192.168.20.111:5000/search',
+                url: 'http://192.168.21.208:5000/search',
                 headers: {
                     'Accept': 'application/json;charset=UTF-8',
                     'Content-Type': 'application/json; charset=UTF-8'

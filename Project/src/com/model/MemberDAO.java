@@ -66,6 +66,11 @@ public class MemberDAO {
 			
 			cnt = psmt.executeUpdate();
 			
+			if (cnt > 0) {
+				System.out.println("추가 성공");
+			} else {
+				System.out.println("추가 실패");
+			}
 			
 		} catch (SQLException e) {
 			System.out.println("db오류");
@@ -85,6 +90,7 @@ public class MemberDAO {
 		
 		try {
 			String sql = "SELECT * FROM USERS WHERE ID = ? AND PW = ?";
+			
 			psmt = con.prepareStatement(sql);
 			
 			psmt.setString(1, dto.getId());
@@ -95,14 +101,16 @@ public class MemberDAO {
 			if(rs.next()) {
 				String id = rs.getString("id");
 				String pw = rs.getString("pw");
+				String phone = rs.getString("phone");
+				String kf = rs.getString("kf");
 				String name = rs.getString("name");
 				String birth = rs.getString("birth");
-				String phone = rs.getString("phone");
-				String gender = rs.getString("gender");
-				String kf = rs.getString("kf");
 				String marry = rs.getString("marry");
+				String gender = rs.getString("gender");
 				
-				info = new MemberDTO(id, pw, name, birth, phone, gender, kf, marry);
+				
+				
+				info = new MemberDTO(id, pw, phone, kf, name, birth, marry, gender);
 			}
 		} catch (SQLException e) {
 			System.out.println("db 오류");

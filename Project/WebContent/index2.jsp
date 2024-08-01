@@ -17,7 +17,7 @@
             var loc = $("#text").val();
 
             $.ajax({
-                url: "http://192.168.20.156:8010/search",
+                url: "http://192.168.20.168:5000/search",
                 headers: {
                     'Accept': 'application/json;charset=UTF-8',
                     'Content-Type': 'application/json; charset=UTF-8'
@@ -25,8 +25,9 @@
                 type: "get",
                 data: {"loc": loc},
                 dataType: "json",
-                success: function(data){
-                    console.log(data);
+                success: function(response){
+                    console.log(response.directions);
+                    console.log(response.places);
                 },
                 error: function(e){
                     console.log(e);
@@ -34,8 +35,6 @@
             });
         });
         
-        be712d0b2346430fa142e10072ba09b9
-        http://192.168.20.156:5000/places.json
     </script>
 </body>
 </html>
