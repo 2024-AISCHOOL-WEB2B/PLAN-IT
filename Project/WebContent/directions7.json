@@ -1,9 +1,0 @@
-{
-    "trans_id": "019100f17b8d772da1f4e8008060a14c",
-    "routes": [
-        {
-            "result_code": 103,
-            "result_msg": "도착 지점 주변의 도로를 탐색할 수 없음"
-        }
-    ]
-}

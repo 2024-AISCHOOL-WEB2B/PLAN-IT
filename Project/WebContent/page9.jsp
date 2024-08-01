@@ -78,12 +78,22 @@
                 .then(data => {
                     const locations = data.locations;
 
+                    
+                    
+                    
+                    
                     // 장소 정보 표시
                     let placesHtml = '';
                     locations.forEach((location, index) => {
                         placesHtml += `<p>${index + 1}: ${location.name} (${location.latitude}, ${location.longitude})</p>`;
                         const markerPosition = new kakao.maps.LatLng(location.latitude, location.longitude);
 
+                        
+                        
+                        
+                        
+                        
+                        
                         // 마커 생성
                         const marker = new kakao.maps.Marker({
                             map: map,
@@ -91,6 +101,10 @@
                             title: location.name
                         });
 
+                        
+                        
+                        
+                        
                         // 번호 표시 커스텀 오버레이 생성
                         const content = `<div class="custom-overlay">${index + 1}</div>`;
                         const customOverlay = new kakao.maps.CustomOverlay({
@@ -102,6 +116,11 @@
                     });
                     document.getElementById('places').innerHTML = placesHtml;
 
+                    
+                    
+                    
+                    
+                    
                     // 경로 정보 가져오기
                     let allPaths = [];
                     let promises = [];

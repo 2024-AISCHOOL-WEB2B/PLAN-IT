@@ -22,6 +22,7 @@
             width: 360px;
             height: 740px;
             overflow-y: auto;
+            margin-top: 100px;
         }
         .month {
             margin-top: 20px;
@@ -78,9 +79,11 @@
 </head>
 <body>
     <div class="calendar-container">
-        <h3>1박2일 여행일정을 만들어드립니다</h3>
+    	<br>
+    	<br>
+        <h3>여행일정을 만들어드립니다</h3>
         <p>출발 날짜를 선택해주세요.</p>
-        <p>(추후 서비스 추가 예정입니다.)</p>
+        <p>(현재 1박2일 서비스만 이용가능합니다.)</p>
         <form id="date-form" action="page3.jsp" method="post">
             <div class="navigation">
                 <button type="button" id="prev-month">이전 달</button>

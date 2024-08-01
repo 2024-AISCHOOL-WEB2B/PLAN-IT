@@ -88,7 +88,7 @@
         function goToMap() {
             const selectedRegion = document.getElementById('regionSelect').value;
             if (selectedRegion) {
-                window.location.href = `page9.jsp?region=${selectedRegion}`;
+                window.location.href = `map.jsp?region=${selectedRegion}`;
             } else {
                 alert('지역을 선택해주세요.');
             }

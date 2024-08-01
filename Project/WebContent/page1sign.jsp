@@ -122,7 +122,7 @@
                 <button type="submit" onclick="location.href='page1login.jsp'">회원가입 완료</button>
             </div>
             <div class="footer">
-                <p>&copy; Team 진심으로 한대유 . All Rights Reserved.</p>
+                <p>&copy; Team PlanIt. All Rights Reserved.</p>
             </div>
         </form>
     </div>
